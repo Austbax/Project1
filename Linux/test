@@ -1,0 +1,9 @@
+#!/bin/bash
+
+months=(jan feb mar)
+for month in ${months[@]} 
+do 
+	mkdir $month
+	touch $month/sys_info.txt
+#for each of those folders create a file called sys_info.txt
+done

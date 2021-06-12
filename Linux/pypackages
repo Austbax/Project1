@@ -1,0 +1,21 @@
+#!/bin/bash
+if [  $UID -ne 0 ]
+then 
+	echo "please run as sudo"
+	exit 
+fi
+
+packages=(python pythin-pip python-nothing)
+#for each of the pypackages in (python python-pip python-nothing
+#check if the package is installed
+
+for package in ${packages[@]}
+do 
+	if [ ! $(which $package) ]
+	then
+	#install package
+		apt install $package 
+	fi
+
+
+done
